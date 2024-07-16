@@ -1,55 +1,147 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>康文昌的在线HTML 教学小工具</title>
-    <style>  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zero的个人空间</title>
+    <style>
       body {
         margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+          border: 1px solid black;
+        } */
+      .yinying {
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgb(64, 71, 86) 0px 0px 0px 1px inset;
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(83, 83, 83);
+        font-size: 14px;
+        color: #666;
+      }
+      /* 当屏幕宽度小于600px时要改变的css */
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shujuqu {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .neirong::-webkit-scrollbar {
+        display: none;
       }
     </style>
   </head>
-  <body>
-    <div style="
-    background-color: #f1f1f1;
-    text-align: center;
-    padding:40px;
-    ">
-      <img src='http://www.people.com.cn/mediafile/pic/20130513/4/15706730575433739648.jpg'alt="毛泽东"width="80px"height="80px"">
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="baise yinying">
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid: #999;
+        "
+        class="flex"
+      >
+        <img src="1.jpg" width="40px" height="40px" alt="" />
+        <div style="margin-left: 10px">zero</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+      </div>
     </div>
-    <div style="
-      max-width: 760px;
-      margin: 30px auto；
-      padding: 15px;
-      line-height: 1.7;
-    ">
-      <h1>七律·人民解放军占领南京</h1>
-
-      <p>钟山风雨起苍黄，</p>
-
-      <p>百万雄师过大江。</p>
-
-      <p>虎踞龙盘今胜昔，</p>
-
-      <p>天翻地覆慨而慷。</p>
-
-      <p>宜将剩勇追穷寇，</p>
-
-      <p>不可沽名学霸王。</p>
-
-      <p>天若有情天亦老，</p>
-
-      <p>人间正道是沧桑。</p>
-    </div>
-    <div style="
-     background-color: #f1f1f1;
-     text-align: center;
-     padding: 40px;
-     font-size: 12px;
-    ">
-     <p>我的网站</p>
-     <a href="https://kangwenchang.com/">友情链接</a>
+    <!-- 主区域 -->
+    <div class="flex 1 flex column"></div>
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baise yinying"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="neirong flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shujuqu">
+            <!-- 数据块 -->
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinying">
+            </div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinying"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinying"
+            ></div>
+            <div style="height: 100px" class="shuju flex1 baise yinying"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column mgr8 mgt8">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="baise mgt8 yinying"
+            <p>你好，朋友。 我是zero。</p>
+            <p>欢迎来到我的个人网站。</p>
+            <p>这是因为我第一次做网站，如有不成熟的地方，请斧正。</p></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="youqu flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="baise mg8 yinying"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
